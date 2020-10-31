@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+// Primary
+$DarkViolet: hsl(256, 26%, 20%);
+$GrayishBlue: hsl(216, 30%, 68%);
+
+// Neutral
+$VeryDarkViolet: hsl(270, 9%, 17%);
+$DarkGrayishViolet: hsl(273, 4%, 51%);
+$VeryLightGray: hsl(0, 0%, 98%);
+
+* {
+  // border: 1px solid red;
+}
+
+body {
+  margin: 0;
+  border: 0;
+  font-size: 16px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+  }
+
+  .container {
+    margin: 0 auto;
+    font-family: "Karla", sans-serif;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 40px;
+
+      a {
+        color: $DarkGrayishViolet;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        margin: 0 20px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover {
+          color: $VeryDarkViolet;
+        }
+      }
+
+      #view-plans-btn {
+        background: $DarkViolet;
+        color: white;
+        padding: 5px 10px;
+        border: 1px solid $DarkViolet;
+
+        &:hover {
+          background: transparent;
+          color: $DarkViolet;
+        }
+      }
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $DarkViolet;
+      color: $VeryLightGray;
+      padding: 20px 250px;
+      height: 600px;
+      position: relative;
+
+      .decal-right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+      }
+
+      .decal-left {
+        position: absolute;
+        left: 0;
+        top: 475px;
+      }
+
+      .header-left {
+        width: 45%;
+        padding-left: 100px;
+
+        .line {
+          height: 1px;
+          width: 200px;
+          background: $VeryLightGray;
+          margin-bottom: 90px;
+        }
+
+        h1 {
+          font-size: 4.5rem;
+          line-height: 3.5rem;
+        }
+
+        p {
+          line-height: 2rem;
+          width: 88%;
+          margin-top: -20px;
+        }
+
+        button {
+          background: transparent;
+          border: 1px solid $VeryLightGray;
+          padding: 10px 30px;
+          color: $VeryLightGray;
+          letter-spacing: 1.4px;
+          text-transform: uppercase;
+          font-size: 0.7rem;
+          margin-top: 20px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: $VeryLightGray;
+            color: $DarkGrayishViolet;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .header-right {
+        position: relative;
+        width: 50%;
+
+        .headerImage {
+          position: absolute;
+          top: -205px;
+          left: 40px;
+        }
+      }
+    }
+
+    .benefits {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      margin: 300px auto 150px auto;
+
+      .line {
+        height: 1px;
+        width: 200px;
+        background: $DarkViolet;
+      }
+
+      h1 {
+        font-size: 4.5rem;
+      }
+
+      .benefit-items {
+        display: flex;
+        margin-top: 25px;
+
+        .card {
+          margin: 10px;
+
+          h3 {
+            font-size: 1.4rem;
+          }
+
+          p {
+            color: $GrayishBlue;
+            line-height: 1.7rem;
+          }
+        }
+      }
+
+      .more-information {
+        display: flex;
+        background: $DarkViolet
+          url("../images/bg-pattern-how-we-work-desktop.svg") no-repeat;
+        background-position: right;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+        height: 220px;
+        padding: 0 70px;
+
+        h2 {
+          color: white;
+          font-size: 3rem;
+          line-height: 2.5rem;
+        }
+
+        button {
+          color: white;
+          border: 1px solid white;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: 0.7rem;
+          background: transparent;
+          padding: 10px 20px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: $VeryLightGray;
+            color: $DarkGrayishViolet;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .footer-container {
+      background: $VeryLightGray url("../images/bg-pattern-footer-desktop.svg")
+        no-repeat;
+      padding-top: 50px;
+
+      footer {
+        width: 60%;
+        margin: 0 auto;
+
+        .footer-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+
+          .footer-top-right {
+            img {
+              opacity: 0.4;
+              transition: opacity 0.3s ease;
+              margin: 0 5px;
+
+              &:hover {
+                opacity: 1;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        .footer-bottom {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 40px;
+
+          .footer-card {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+
+            b {
+              color: #929292ce;
+              text-transform: uppercase;
+              font-size: 0.8rem;
+              margin-bottom: 20px;
+            }
+
+            a {
+              text-decoration: none;
+              color: #524b5f;
+              font-weight: 600;
+              text-transform: uppercase;
+              font-size: 0.8rem;
+              margin: 6px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
